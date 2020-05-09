@@ -80,9 +80,7 @@ router.delete(
           }
 
           // Delete
-          post.remove().then(() => {
-            res.json({ success: true });
-          });
+          post.remove().then(() => res.json({ success: true }));
         })
         .catch((err) =>
           res.status(404).json({ postnotfound: "No post found" })
